@@ -47,3 +47,23 @@ A simple Flutter application that allows users to register/login, create events 
 - Events stored in `events` collection
 - Customers stored in `customers` collection
 - Bookings stored in `bookings` collection
+
+### `customer_page.dart` – 🙋‍♂️ Customer Page
+
+- Displays list of **available events**
+- For each event:
+  - Shows name, venue, date, price, and tickets left
+  - If event is within 24 hours of creation:
+    - Only VIP users can book
+    - Non-VIP sees “VIP Only for now”
+- After 24 hours:
+  - All users can book
+- Bookings stored in `bookings` collection:
+  ```json
+  {
+    "eventId": "...",
+    "userId": "...",
+    "ticketCount": 2,
+    "totalPrice": 50,
+    "bookedAt": Timestamp
+  }
