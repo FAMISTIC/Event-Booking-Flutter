@@ -1,4 +1,4 @@
-![photo6](https://github.com/user-attachments/assets/9e650b40-93a8-4db8-b95b-644aee85e435)# 🎟️ Event Booking App (Flutter + Firebase)
+# 🎟️ Event Booking App (Flutter + Firebase)
 
 A simple Flutter application that allows users to register/login, create events (organizers), and book event tickets (customers). Includes time-based VIP access control.
 
