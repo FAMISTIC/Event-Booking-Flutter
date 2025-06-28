@@ -16,6 +16,12 @@ A simple Flutter application that allows users to register/login, create events 
 
 ## 📁 Project Structure
 
+## 📸 Screenshots - Every Page
+-Login Page
+<img src="https://github.com/user-attachments/assets/7e5b8d02-2185-4bb4-96cc-764aa06472fd" alt="Food Ordering App Screenshot" width="150"/>
+-Organizer Page
+<img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="150"/>
+
 ### `main.dart` – ⚙️ Running Page
 
 ```dart
@@ -50,7 +56,6 @@ class MyApp extends StatelessWidget {
 }
 ```
 ### `auth_page.dart` – 🔐 Authentication Page
-<img src="https://github.com/user-attachments/assets/7e5b8d02-2185-4bb4-96cc-764aa06472fd" alt="Food Ordering App Screenshot" width="100"/>
 
 - Handles **login and registration**
 - Upon registration:
