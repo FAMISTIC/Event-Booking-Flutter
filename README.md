@@ -17,20 +17,36 @@ A simple Flutter application that allows users to register/login, create events 
 ## 📁 Project Structure
 
 ## 📸 Screenshots - Every Page
-- Login Page
-<img src="https://github.com/user-attachments/assets/7e5b8d02-2185-4bb4-96cc-764aa06472fd" alt="Food Ordering App Screenshot" width="300"/>
 
-- Registration Page
-<img src="https://github.com/user-attachments/assets/14f3b982-6405-4e08-8aba-5fc27cc4a83c" alt="Food Ordering App Screenshot" width="300"/>
-
-- Organizer Page
-<img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="300"/>
-
-- VIP Page
-<img src="https://github.com/user-attachments/assets/7eb09d0e-44ee-4142-be4e-8f641261b9ca" alt="Food Ordering App Screenshot" width="300"/>
-
-- Non-VIP Page
-<img src="https://github.com/user-attachments/assets/52c6b2da-8e6a-4780-b02b-29534a8a0e4e" alt="Food Ordering App Screenshot" width="300"/>
+<table>
+  <tr>
+    <td>
+      <b>Login Page</b><br/>
+      <img src="https://github.com/user-attachments/assets/7e5b8d02-2185-4bb4-96cc-764aa06472fd" width="250"/>
+    </td>
+    <td>
+      <b>Registration Page</b><br/>
+      <img src="https://github.com/user-attachments/assets/14f3b982-6405-4e08-8aba-5fc27cc4a83c" width="250"/>
+    </td>
+    <td>
+      <b>Organizer Page</b><br/>
+      <img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" width="250"/>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>VIP Page</b><br/>
+      <img src="https://github.com/user-attachments/assets/7eb09d0e-44ee-4142-be4e-8f641261b9ca" width="250"/>
+    </td>
+    <td>
+      <b>Non-VIP Page</b><br/>
+      <img src="https://github.com/user-attachments/assets/52c6b2da-8e6a-4780-b02b-29534a8a0e4e" width="250"/>
+    </td>
+    <td>
+      <!-- Optional: empty cell or add another screenshot -->
+    </td>
+  </tr>
+</table>
 
 
 ### `main.dart` – ⚙️ Running Page
