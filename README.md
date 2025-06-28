@@ -50,27 +50,14 @@ class MyApp extends StatelessWidget {
 }
 ```
 ### `auth_page.dart` – 🔐 Authentication Page
+<img src="https://github.com/user-attachments/assets/7e5b8d02-2185-4bb4-96cc-764aa06472fd" alt="Food Ordering App Screenshot" width="300"/>
 
 - Handles **login and registration**
 - Upon registration:
   - Accepts `email`, `password`, and `VIP` status
   - Saves user to Firebase Auth
   - Creates a Firestore document in `customers` collection:
-    ```dart
-    
-    import 'package:cloud_firestore/cloud_firestore.dart';
-    import 'package:flutter/material.dart';
-    import 'package:firebase_auth/firebase_auth.dart';
-    import 'event_page.dart';
-    import 'customer_page.dart';
-    
-    class AuthPage extends StatefulWidget {
-      const AuthPage({super.key});
-    
-      @override
-      State<AuthPage> createState() => _AuthPageState();
-    }
-    
+    ```dart   
     class _AuthPageState extends State<AuthPage> {
       final auth = FirebaseAuth.instance;
       final emailController = TextEditingController();
@@ -201,21 +188,7 @@ class MyApp extends StatelessWidget {
 - After 24 hours:
   - All users can book
 - Bookings stored in `bookings` collection:
-  ```dart
-    
-    import 'package:cloud_firestore/cloud_firestore.dart';
-    import 'package:firebase_auth/firebase_auth.dart';
-    import 'package:flutter/material.dart';
-    
-    import 'auth_page.dart';
-    
-    class CustomerPage extends StatefulWidget {
-      const CustomerPage({super.key});
-    
-      @override
-      State<CustomerPage> createState() => _CustomerPageState();
-    }
-    
+  ```dart       
     class _CustomerPageState extends State<CustomerPage> {
       bool isVIP = false;
     
@@ -398,4 +371,5 @@ class MyApp extends StatelessWidget {
                 ));
       }
     }
+
 
