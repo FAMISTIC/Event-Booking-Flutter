@@ -1,4 +1,4 @@
-# 🎟️ Event Booking App (Flutter + Firebase)
+![photo6](https://github.com/user-attachments/assets/9e650b40-93a8-4db8-b95b-644aee85e435)# 🎟️ Event Booking App (Flutter + Firebase)
 
 A simple Flutter application that allows users to register/login, create events (organizers), and book event tickets (customers). Includes time-based VIP access control.
 
@@ -19,6 +19,18 @@ A simple Flutter application that allows users to register/login, create events 
 ## 📸 Screenshots - Every Page
 - Login Page
 <img src="https://github.com/user-attachments/assets/7e5b8d02-2185-4bb4-96cc-764aa06472fd" alt="Food Ordering App Screenshot" width="300"/>
+
+- Registration Page
+<img src="https://github.com/user-attachments/assets/14f3b982-6405-4e08-8aba-5fc27cc4a83c" alt="Food Ordering App Screenshot" width="300"/>
+
+- Organizer Page
+<img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="300"/>
+
+-  Page
+<img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="300"/>
+
+- Organizer Page
+<img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="300"/>
 
 - Organizer Page
 <img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="300"/>
