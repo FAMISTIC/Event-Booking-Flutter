@@ -26,14 +26,12 @@ A simple Flutter application that allows users to register/login, create events 
 - Organizer Page
 <img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="300"/>
 
--  Page
-<img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="300"/>
+- VIP Page
+<img src="https://github.com/user-attachments/assets/7eb09d0e-44ee-4142-be4e-8f641261b9ca" alt="Food Ordering App Screenshot" width="300"/>
 
-- Organizer Page
-<img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="300"/>
+- Non-VIP Page
+<img src="https://github.com/user-attachments/assets/52c6b2da-8e6a-4780-b02b-29534a8a0e4e" alt="Food Ordering App Screenshot" width="300"/>
 
-- Organizer Page
-<img src="https://github.com/user-attachments/assets/d3d821ed-038c-4ef6-b867-2387163656ec" alt="Food Ordering App Screenshot" width="300"/>
 
 ### `main.dart` – ⚙️ Running Page
 
