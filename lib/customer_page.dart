@@ -13,6 +13,21 @@ class CustomerPage extends StatefulWidget {
 }
 
 class _CustomerPageState extends State<CustomerPage> {
+  bool isVIP = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _checkVIP();
+  }
+
+  Future<void> _checkVIP() async {
+    final uid = FirebaseAuth.instance.currentUser!.uid;
+    final doc =
+        await FirebaseFirestore.instance.collection('customers').doc(uid).get();
+    setState(() => isVIP = doc['isVIP'] ?? false);
+  }
+
   @override
   Widget build(BuildContext c) {
     final user = FirebaseAuth.instance.currentUser!;
@@ -42,9 +57,6 @@ class _CustomerPageState extends State<CustomerPage> {
                 if (ss.connectionState == ConnectionState.waiting) {
                   return Center(child: CircularProgressIndicator());
                 }
-                if (ss.hasData) {
-                  print(ss.data!.docs.length);
-                }
                 if (!ss.hasData || ss.data!.docs.isEmpty) {
                   return Center(child: Text('No events available.'));
                 }
@@ -52,13 +64,31 @@ class _CustomerPageState extends State<CustomerPage> {
                   children: ss.data!.docs.map((d) {
                     final e = d.data() as Map<String, dynamic>;
                     final ticketsLeft = e['availableTickets'] as int;
+                    final isCancelled =
+                        e['name'].toString().toLowerCase().contains('canceled');
+                    final createdAt = (e['createdAt'] as Timestamp).toDate();
+                    final now = DateTime.now();
+                    final withinVIPWindow =
+                        now.difference(createdAt).inHours < 24;
+                    final canBook = !withinVIPWindow || isVIP;
+
                     return ListTile(
-                      title: Text(e['name']),
+                      title: Text(e['name'],
+                          style: TextStyle(
+                              color: isCancelled ? Colors.red : null,
+                              fontStyle:
+                                  isCancelled ? FontStyle.italic : null)),
                       subtitle: Text(
                           '${e['venue']} • ${e['date'].toDate()} • \$${e['ticketPrice']} • left: $ticketsLeft'),
-                      trailing: ElevatedButton(
-                          child: Text('Book'),
-                          onPressed: () => _showBookingDialog(c, d.id, e)),
+                      trailing: isCancelled
+                          ? Text('Canceled',
+                              style: TextStyle(color: Colors.red))
+                          : ElevatedButton(
+                              child: Text('Book'),
+                              onPressed: canBook
+                                  ? () => _showBookingDialog(c, d.id, e)
+                                  : null,
+                            ),
                     );
                   }).toList(),
                 );
@@ -99,7 +129,6 @@ class _CustomerPageState extends State<CustomerPage> {
                               .doc(b.id)
                               .delete();
 
-                          // Optionally increase availableTickets back
                           await FirebaseFirestore.instance
                               .collection('events')
                               .doc(bk['eventId'])
