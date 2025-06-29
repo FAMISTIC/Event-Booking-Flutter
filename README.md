@@ -49,7 +49,14 @@ A simple Flutter application that allows users to register/login, create events 
 </table>
 
 
-### `main.dart` – ⚙️ Running Page
+### `main.dart` – ⚙️ Main Page
+
+- Runs **The app**
+- The page contains:
+  -  `API Key`,
+  -  `App Id`, 
+  -  `Project Id` 
+  To initialize the connection to the Firebase Cloud with this Flutter app.
 
 ```dart
 import 'package:flutter/material.dart';
