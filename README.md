@@ -48,6 +48,11 @@ A simple Flutter application that allows users to register/login, create events 
   </tr>
 </table>
 
+## 🛠️ Tech Stack
+
+- **Frontend**: Flutter (Dart)
+- **Backend/Database**: Firebase (Firestore, Auth)
+- **Platform**: Visual Studio Code
 
 ### `main.dart` – ⚙️ Main Page
 
@@ -411,4 +416,59 @@ class MyApp extends StatelessWidget {
       }
     }
 
+## ⭐ Version
 
+ - pubspec.yaml
+```yaml
+ sdk: '>=3.6.2 <4.0.0'
+```
+ - android/app/build.gradle
+```json
+ mindSdkVersion 21
+ targetSdkVersion 33
+```
+
+ - android/build.gradle
+```json
+
+ buildscript {
+    ext.kotlin_version = '1.9.23'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.4.0'
+        //classpath "com.google.gms:google-services:4.3.14"
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+```
+
+## 📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## 🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
