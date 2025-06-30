@@ -2,6 +2,8 @@
 
 A simple Flutter application that allows users to register/login, create events (organizers), and book event tickets (customers). Includes time-based VIP access control.
 
+## 📕 Author: Muhammad Farhat Nazmi bin Mohd Razali
+
 ## 🔧 Features
 
 - Firebase Authentication (email/password)
